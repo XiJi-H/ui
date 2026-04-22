@@ -43,7 +43,9 @@ function openSecondary(title, contentHtml) {
     overlay.classList.add('active');
     
     // Re-initialize icons for new content
-    lucide.createIcons();
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
 }
 
 function closeSecondary() {
